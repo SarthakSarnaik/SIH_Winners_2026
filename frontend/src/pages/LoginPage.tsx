@@ -79,7 +79,7 @@ export const LoginPage: React.FC = () => {
           </div>
           <div className="hidden sm:flex items-center gap-2 text-xs text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
             <Cloud className="h-3.5 w-3.5 text-blue-600" />
-            <span>AWS Multi-Tenant Architecture • ap-southeast-2</span>
+            <span>Cloud-Native Architecture • Render & Vercel</span>
           </div>
         </div>
       </div>

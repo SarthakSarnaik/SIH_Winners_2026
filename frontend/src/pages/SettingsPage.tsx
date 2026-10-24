@@ -84,13 +84,13 @@ export const SettingsPage: React.FC = () => {
         <div className="flex items-center justify-between border-b border-slate-100 pb-3">
           <div>
             <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-              AWS Cloud Architecture Telemetry (Region: ap-southeast-2)
+              Cloud Infrastructure Telemetry (Render, Neon & Vercel)
             </h3>
-            <p className="text-xs text-slate-500">Dual-mode operation: AWS cloud ready with seamless local fallback</p>
+            <p className="text-xs text-slate-500">Cloud-native operation: Neon PostgreSQL + Render API with Vercel CDN</p>
           </div>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200">
-            <Cloud className="h-3.5 w-3.5 text-blue-600" />
-            <span>Selected Region: ap-southeast-2</span>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
+            <Cloud className="h-3.5 w-3.5 text-emerald-600" />
+            <span>Multi-Tier Architecture</span>
           </span>
         </div>
 
