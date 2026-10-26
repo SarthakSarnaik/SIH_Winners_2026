@@ -133,9 +133,9 @@ export const RenewalsPage: React.FC = () => {
         {role === 'COLLEGE_USER' && (
           <button
             onClick={() => setShowSubmitModal(true)}
-            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-indigo-900 hover:bg-indigo-800 text-white text-xs font-semibold shadow-sm transition-all"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#092D62] hover:bg-[#072249] text-white text-xs font-bold shadow-sm transition-all"
           >
-            <PlusCircle className="h-4 w-4" />
+            <PlusCircle className="h-4 w-4 text-[#FFB800]" />
             <span>Submit Renewal FDR</span>
           </button>
         )}
@@ -343,7 +343,7 @@ export const RenewalsPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-4 py-2 bg-indigo-900 text-white rounded-lg font-semibold hover:bg-indigo-800 disabled:opacity-50"
+                  className="px-4 py-2 bg-[#092D62] text-white rounded-xl font-bold hover:bg-[#072249] transition-colors disabled:opacity-50"
                 >
                   {isSubmitting ? 'Submitting...' : 'Link & Submit Renewal'}
                 </button>

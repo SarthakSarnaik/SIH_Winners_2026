@@ -118,16 +118,16 @@ export const FDRDetailsPage: React.FC = () => {
             <>
               <Link
                 to={`/renewals?fdr_id=${fdr.id}`}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-semibold hover:bg-indigo-100 transition-colors"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 text-slate-800 border border-slate-300 text-xs font-bold hover:bg-slate-200 transition-colors"
               >
-                <RefreshCw className="h-3.5 w-3.5" />
+                <RefreshCw className="h-3.5 w-3.5 text-[#092D62]" />
                 <span>Submit Renewal</span>
               </Link>
               <Link
                 to={`/releases?fdr_id=${fdr.id}`}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-50 text-teal-700 border border-teal-200 text-xs font-semibold hover:bg-teal-100 transition-colors"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#FEF9EE] text-[#B45309] border border-amber-300 text-xs font-bold hover:bg-amber-100 transition-colors"
               >
-                <ArrowUpRight className="h-3.5 w-3.5" />
+                <ArrowUpRight className="h-3.5 w-3.5 text-[#FFB800]" />
                 <span>Request Release</span>
               </Link>
             </>
@@ -136,9 +136,9 @@ export const FDRDetailsPage: React.FC = () => {
           {(role === 'AICTE_OFFICER' || role === 'WORKFLOW_APPROVER' || role === 'ADMIN') && (
             <Link
               to={`/officer/review/${fdr.id}`}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-blue-900 text-white text-xs font-semibold hover:bg-blue-800 transition-colors shadow-sm"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#092D62] text-white text-xs font-bold hover:bg-[#072249] transition-colors shadow-sm"
             >
-              <FileCheck className="h-4 w-4" />
+              <FileCheck className="h-4 w-4 text-[#FFB800]" />
               <span>Perform Scrutiny</span>
             </Link>
           )}

@@ -204,9 +204,9 @@ export const ReleasesPage: React.FC = () => {
         {role === 'COLLEGE_USER' && (
           <button
             onClick={() => setShowCreateModal(true)}
-            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-teal-800 hover:bg-teal-700 text-white text-xs font-semibold shadow-sm transition-all"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#092D62] hover:bg-[#072249] text-white text-xs font-bold shadow-sm transition-all"
           >
-            <PlusCircle className="h-4 w-4" />
+            <PlusCircle className="h-4 w-4 text-[#FFB800]" />
             <span>Request Deposit Release</span>
           </button>
         )}
@@ -303,9 +303,9 @@ export const ReleasesPage: React.FC = () => {
                     <td className="py-3 px-4 text-right space-x-2">
                       <button
                         onClick={() => openWorkflowModal(r)}
-                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-teal-800 text-white font-semibold text-xs hover:bg-teal-700 shadow-sm"
+                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-[#092D62] text-white font-bold text-xs hover:bg-[#072249] shadow-sm transition-colors"
                       >
-                        <CheckSquare className="h-3.5 w-3.5" />
+                        <CheckSquare className="h-3.5 w-3.5 text-[#FFB800]" />
                         <span>Workflow Pipeline</span>
                       </button>
                       <Link
@@ -380,7 +380,7 @@ export const ReleasesPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-4 py-2 bg-teal-800 text-white rounded-lg font-semibold hover:bg-teal-700 disabled:opacity-50"
+                  className="px-4 py-2 bg-[#092D62] text-white rounded-xl font-bold hover:bg-[#072249] transition-colors disabled:opacity-50"
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Official Request'}
                 </button>
@@ -849,7 +849,7 @@ export const ReleasesPage: React.FC = () => {
                         <textarea
                           rows={2}
                           required
-                          placeholder="All statutory milestones verified. DepositLedger portal process closed successfully."
+                          placeholder="All statutory milestones verified. VajraKosh portal process closed successfully."
                           value={stageReason}
                           onChange={(e) => setStageReason(e.target.value)}
                           className="w-full px-3 py-2 rounded-lg border border-slate-300"

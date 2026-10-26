@@ -1,11 +1,11 @@
-# DepositLedger: System Architecture & Design Specification
+# VajraKosh: System Architecture & Design Specification
 
 > For the comprehensive, detailed architecture specification with RBAC models, 7-stage release pipeline, and full state machine diagrams, see **[`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md)** and **[`docs/PROTOTYPE_FLOWCHARTS.md`](./docs/PROTOTYPE_FLOWCHARTS.md)**.
 
 ---
 
 ## 1. System Overview
-**DepositLedger** digitizes and streamlines the statutory lifecycle management of security deposits and Fixed Deposit Receipts (FDRs) submitted by technical institutions to the **All India Council for Technical Education (AICTE)**.
+**VajraKosh** digitizes and streamlines the statutory lifecycle management of security deposits and Fixed Deposit Receipts (FDRs) submitted by technical institutions to the **All India Council for Technical Education (AICTE)**.
 
 ## 2. Technology Stack & Deployment
 1. **Frontend:** React 18, Vite, TypeScript, Tailwind CSS, Lucide React, Recharts, React Router v6.

@@ -1,4 +1,4 @@
-# DepositLedger — Prototype Flowcharts & State Machines
+# VajraKosh — Prototype Flowcharts & State Machines
 
 > **SIH 2026 Problem Statement ID: 26265**  
 > *Editable Mermaid Flowcharts Matching Implemented and Tested Code*  
@@ -89,7 +89,7 @@ flowchart TD
     
     Gate6 --> Gate6Review{"Stage 6b: Discharge Review\n(AICTE Officer Verification)"}
     Gate6Review -->|Reject| Gate6
-    Gate6Review -->|Accept| Gate7["Stage 7: Workflow Completion\n(DepositLedger Process Closed)"]
+    Gate6Review -->|Accept| Gate7["Stage 7: Workflow Completion\n(VajraKosh Process Closed)"]
     
     Gate7 --> End([Complete Lifecycle Logged in Audit Trail])
 ```

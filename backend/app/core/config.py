@@ -3,7 +3,7 @@ from typing import List, Optional
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "AICTE Security Deposit / FDR Portal"
+    PROJECT_NAME: str = "VajraKosh — AICTE Security Deposit & FDR Portal"
     API_V1_STR: str = "/api/v1"
     
     # Security

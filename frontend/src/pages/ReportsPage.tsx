@@ -24,7 +24,7 @@ import {
 } from 'recharts';
 import { api, API_BASE } from '../services/api';
 
-const COLORS = ['#0A2540', '#F58220', '#10B981', '#EF4444', '#6366F1', '#8B5CF6'];
+const COLORS = ['#092D62', '#FFB800', '#10B981', '#EF4444', '#3B82F6', '#8B5CF6'];
 
 export const ReportsPage: React.FC = () => {
   const [analytics, setAnalytics] = useState<any>(null);
@@ -100,7 +100,7 @@ export const ReportsPage: React.FC = () => {
                 <XAxis dataKey="bucket" tick={{ fontSize: 10 }} />
                 <YAxis allowDecimals={false} />
                 <Tooltip />
-                <Bar dataKey="count" fill="#0A2540" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="count" fill="#092D62" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -150,7 +150,7 @@ export const ReportsPage: React.FC = () => {
                 <XAxis dataKey="bank" tick={{ fontSize: 11 }} />
                 <YAxis tickFormatter={(val) => `₹${(val / 100000).toFixed(0)}L`} />
                 <Tooltip formatter={(value: any) => [`₹${Number(value).toLocaleString('en-IN')}`, 'Deposit Volume']} />
-                <Bar dataKey="amount" fill="#F58220" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="amount" fill="#092D62" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>

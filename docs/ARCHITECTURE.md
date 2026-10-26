@@ -1,4 +1,4 @@
-# DepositLedger — System Architecture & Technical Specifications
+# VajraKosh — System Architecture & Technical Specifications
 
 > **SIH 2026 Problem Statement ID: 26265**  
 > *Streamline of Security Deposit / Fixed Deposit Receipt (FDR) Portal for Technical Institutions*  
@@ -8,7 +8,7 @@
 
 ## 1. System Overview
 
-DepositLedger is a centralized, institutional fixed deposit receipt (FDR) custody and regulatory compliance management platform built for AICTE. It digitizes the entire lifecycle of security deposits—from initial submission and manual documentary scrutiny to automated maturity tracking, successor-aware renewals, and multi-stage administrative lien release.
+VajraKosh is a centralized, institutional fixed deposit receipt (FDR) custody and regulatory compliance management platform built for AICTE. It digitizes the entire lifecycle of security deposits—from initial submission and manual documentary scrutiny to automated maturity tracking, successor-aware renewals, and multi-stage administrative lien release.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -40,7 +40,7 @@ DepositLedger is a centralized, institutional fixed deposit receipt (FDR) custod
 
 ## 2. Role-Based Access Control (RBAC) Matrix
 
-DepositLedger enforces server-side authorization on every endpoint. Hiding UI elements is treated purely as user experience, never as security.
+VajraKosh enforces server-side authorization on every endpoint. Hiding UI elements is treated purely as user experience, never as security.
 
 | Role | Read Scope | FDR Submit | Scrutiny | Clearance A | Clearance B | Final Auth | Issue NOC | Discharge Evidence | Manage Users |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

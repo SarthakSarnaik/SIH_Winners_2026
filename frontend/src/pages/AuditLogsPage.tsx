@@ -42,8 +42,8 @@ export const AuditLogsPage: React.FC = () => {
       {/* Header */}
       <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
-            <ShieldAlert className="h-4 w-4 text-purple-700" />
+          <div className="flex items-center gap-2 text-xs font-semibold text-[#092D62] uppercase tracking-wider mb-1">
+            <ShieldAlert className="h-4 w-4 text-[#092D62]" />
             <span>Administrative Traceability & Security</span>
           </div>
           <h1 className="text-xl font-bold text-slate-900">System Audit Trail & Event Logs</h1>

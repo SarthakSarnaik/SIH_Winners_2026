@@ -1,4 +1,4 @@
-# DepositLedger: Senior QA & Release Reviewer Audit Report
+# VajraKosh: Senior QA & Release Reviewer Audit Report
 ### Hackathon Evaluation: Smart India Hackathon (SIH 2026) — PS 26265
 **Target Organization:** All India Council for Technical Education (AICTE), Ministry of Education, Government of India.  
 **Reviewer Role:** Independent Senior QA Engineer & Release Reviewer  
@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary & Verification Verdict
 
-An exhaustive, independent verification of the **DepositLedger** codebase was conducted across backend API controllers, ORM schemas, security middleware, maturity engines, frontend React/TypeScript components, documentation, test suites, and production build pipelines.
+An exhaustive, independent verification of the **VajraKosh** codebase was conducted across backend API controllers, ORM schemas, security middleware, maturity engines, frontend React/TypeScript components, documentation, test suites, and production build pipelines.
 
 - **Automated Backend Test Suite:** **14 of 14 Scenarios PASSED** (`pytest tests/ -v`, execution duration: `15.95s`).
 - **Frontend Production Build:** **PASSED** (`tsc && vite build`, exit code `0`, bundle generated in `11.33s`).
@@ -85,13 +85,13 @@ dist/assets/index-VqHIoNwx.js   857.17 kB │ gzip: 227.31 kB
 
 ```text
 ================================================================================
- DepositLedger - AICTE FDR Portal: Deterministic Synthetic Demo Seeder
+ VajraKosh - AICTE FDR Portal: Deterministic Synthetic Demo Seeder
  PS 26265 - SIH 2026 Prototype Evaluation
 ================================================================================
 [1/3] Resetting database tables...
 [2/3] Seeding realistic synthetic records across 4 institutions and 5 roles...
-[DB Seed] Seeding realistic fictional data for DepositLedger - AICTE FDR Portal...
-[DB Seed] Successfully initialized DepositLedger with 4 institutions, 7 users (5 roles incl. AUDITOR + WORKFLOW_APPROVER), 7 FDRs, 1 pre-seeded staged release case, and renewal lineage!
+[DB Seed] Seeding realistic fictional data for VajraKosh - AICTE FDR Portal...
+[DB Seed] Successfully initialized VajraKosh with 4 institutions, 7 users (5 roles incl. AUDITOR + WORKFLOW_APPROVER), 7 FDRs, 1 pre-seeded staged release case, and renewal lineage!
 [DB Seed] PROTOTYPE - Synthetic Data - No live bank connection
 [3/3] Demo seeding complete!
 ```

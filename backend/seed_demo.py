@@ -1,5 +1,5 @@
 """
-DepositLedger - SIH 2026 PS 26265
+VajraKosh - SIH 2026 PS 26265
 Synthetic Demo Database Reset & Seeding Utility
 
 Resets the local prototype SQLite database and re-seeds deterministic synthetic records.
@@ -12,7 +12,7 @@ from app.db.init_db import init_db
 
 def reset_and_seed():
     print("================================================================================")
-    print(" DepositLedger - AICTE FDR Portal: Deterministic Synthetic Demo Seeder")
+    print(" VajraKosh - AICTE FDR Portal: Deterministic Synthetic Demo Seeder")
     print(" PS 26265 - SIH 2026 Prototype Evaluation")
     print("================================================================================")
     

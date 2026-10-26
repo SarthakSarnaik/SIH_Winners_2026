@@ -1,7 +1,7 @@
-# DepositLedger: Cloud Deployment Guide (Render & Vercel)
+# VajraKosh: Cloud Deployment Guide (Render & Vercel)
 ### Problem Statement ID: 26265 — AICTE Security Deposit & FDR Portal
 
-This guide provides step-by-step instructions for deploying DepositLedger to **Render** (Backend API + Managed PostgreSQL) and **Vercel** or **Render** (React Frontend).
+This guide provides step-by-step instructions for deploying VajraKosh to **Render** (Backend API + Managed PostgreSQL) and **Vercel** or **Render** (React Frontend).
 
 ---
 
@@ -34,10 +34,10 @@ This guide provides step-by-step instructions for deploying DepositLedger to **R
 
 ## 2. Step 1: Push Repository to Your GitHub
 
-1. Create a **New Repository** on your GitHub account (e.g., `https://github.com/<YOUR_USERNAME>/DepositLedger`).
+1. Create a **New Repository** on your GitHub account (e.g., `https://github.com/<YOUR_USERNAME>/VajraKosh`).
 2. In your local project directory (`AICTE-FDR-portal`), link your remote and push:
 ```bash
-git remote add origin https://github.com/<YOUR_USERNAME>/DepositLedger.git
+git remote add origin https://github.com/<YOUR_USERNAME>/VajraKosh.git
 git branch -M main
 git push -u origin main
 ```
@@ -50,7 +50,7 @@ Render provisions the FastAPI Web Service and Managed PostgreSQL database automa
 
 1. Log in to [Render Dashboard](https://dashboard.render.com).
 2. Click **New +** -> **Blueprint**.
-3. Select your GitHub repository (`DepositLedger`).
+3. Select your GitHub repository (`VajraKosh`).
 4. Render will detect [`render.yaml`](./render.yaml) and list:
    - **`aicte-fdr-db`**: Managed PostgreSQL Database
    - **`aicte-fdr-backend`**: FastAPI Web Service (`python run.py`)
@@ -68,7 +68,7 @@ Vercel provides ultra-fast global CDN hosting for React/Vite single-page applica
 
 1. Log in to [Vercel Dashboard](https://vercel.com).
 2. Click **Add New...** -> **Project**.
-3. Import your GitHub repository (`DepositLedger`).
+3. Import your GitHub repository (`VajraKosh`).
 4. Configure Project Settings:
    - **Framework Preset**: `Vite`
    - **Root Directory**: Select `frontend` (or leave as root, since root `vercel.json` is already provided).

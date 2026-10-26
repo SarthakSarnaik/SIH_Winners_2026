@@ -217,6 +217,8 @@ export interface AdminDashboardStats {
   total_users: number;
   total_fdrs: number;
   total_amount: number;
+  approaching_maturity?: number;
+  pending_releases?: number;
   system_health: string;
   last_maturity_job?: any;
   recent_audit_count: number;

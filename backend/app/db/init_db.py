@@ -16,7 +16,7 @@ def init_db(db: Session):
     if db.query(Institution).count() > 0:
         return
 
-    print("[DB Seed] Seeding realistic fictional data for DepositLedger - AICTE FDR Portal...")
+    print("[DB Seed] Seeding realistic fictional data for VajraKosh - AICTE FDR Portal...")
 
     # 1. Institutions
     inst1 = Institution(
@@ -437,12 +437,12 @@ def init_db(db: Session):
         entity_id="GENESIS",
         result="SUCCESS",
         metadata_json={
-            "description": "DepositLedger system initialized with synthetic fictional data for SIH 2026 PS 26265 prototype demo",
+            "description": "VajraKosh system initialized with synthetic fictional data for SIH 2026 PS 26265 prototype demo",
             "disclaimer": "PROTOTYPE - SYNTHETIC DATA - No live bank connection - No actual funds transfer"
         }
     )
     db.add(a1)
 
     db.commit()
-    print("[DB Seed] Successfully initialized DepositLedger with 4 institutions, 7 users (5 roles incl. AUDITOR + WORKFLOW_APPROVER), 7 FDRs, 1 pre-seeded staged release case, and renewal lineage!")
+    print("[DB Seed] Successfully initialized VajraKosh with 4 institutions, 7 users (5 roles incl. AUDITOR + WORKFLOW_APPROVER), 7 FDRs, 1 pre-seeded staged release case, and renewal lineage!")
     print("[DB Seed] PROTOTYPE - Synthetic Data - No live bank connection")

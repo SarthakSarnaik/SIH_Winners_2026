@@ -91,9 +91,9 @@ export const FDRListPage: React.FC = () => {
           {(role === 'COLLEGE_USER' || role === 'ADMIN') && (
             <Link
               to="/fdrs/new"
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-aicte-navy-900 hover:bg-aicte-navy-800 text-white text-xs font-semibold shadow-sm transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#092D62] hover:bg-[#072249] text-white text-xs font-bold shadow-sm transition-all"
             >
-              <PlusCircle className="h-4 w-4" />
+              <PlusCircle className="h-4 w-4 text-[#FFB800]" />
               <span>Submit New FDR</span>
             </Link>
           )}

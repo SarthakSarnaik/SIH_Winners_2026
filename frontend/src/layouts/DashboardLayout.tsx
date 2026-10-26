@@ -1,41 +1,55 @@
 import React, { useState } from 'react';
-import { Outlet, useLocation, Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { Navbar } from '../components/common/Navbar';
 import { Sidebar } from '../components/common/Sidebar';
-import { Menu, X, ChevronRight, Home } from 'lucide-react';
+import { X } from 'lucide-react';
 
 export const DashboardLayout: React.FC = () => {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-  const location = useLocation();
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(() => {
+    try {
+      return localStorage.getItem('fdr_sidebar_collapsed') === 'true';
+    } catch {
+      return false;
+    }
+  });
 
-  // Generate breadcrumb items from path
-  const pathParts = location.pathname.split('/').filter(Boolean);
+  const toggleSidebarCollapse = () => {
+    setIsSidebarCollapsed((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem('fdr_sidebar_collapsed', String(next));
+      } catch {}
+      return next;
+    });
+  };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
-      {/* MANDATORY PROTOTYPE DISCLAIMER BANNER — Required by Specification */}
-      <div className="w-full bg-amber-600 text-white text-center text-xs font-semibold py-1.5 px-4 flex items-center justify-center gap-2 z-50 sticky top-0" id="prototype-banner">
-        <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-200 animate-pulse" />
-        <span>⚠ Prototype · Synthetic Data · No live bank connection · No actual funds transfer · For SIH 2026 Evaluation Only</span>
-        <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-200 animate-pulse" />
-      </div>
-      <Navbar />
+    <div className="h-screen flex flex-col bg-[#F5F7FA] overflow-hidden">
+      {/* Main Official Header / Navbar (Anchored top, never scrolls) */}
+      <Navbar 
+        onToggleMobileSidebar={() => setMobileSidebarOpen(true)}
+        onToggleDesktopSidebar={toggleSidebarCollapse}
+        isSidebarCollapsed={isSidebarCollapsed}
+      />
 
-
-      <div className="flex-1 flex">
-        {/* Desktop Persistent Left Sidebar */}
-        <div className="hidden md:flex">
-          <Sidebar />
-        </div>
+      <div className="flex-1 flex overflow-hidden min-h-0">
+        {/* Desktop Persistent Left Sidebar (Fixed on the left, does not scroll when right side scrolls) */}
+        <aside className="hidden md:flex shrink-0 h-full overflow-hidden">
+          <Sidebar 
+            isCollapsed={isSidebarCollapsed} 
+            onToggleCollapse={toggleSidebarCollapse} 
+          />
+        </aside>
 
         {/* Mobile Slide-over Sidebar */}
         {mobileSidebarOpen && (
           <div className="fixed inset-0 z-50 flex md:hidden">
             <div
-              className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm"
+              className="fixed inset-0 bg-[#0B1F3A]/70 backdrop-blur-sm"
               onClick={() => setMobileSidebarOpen(false)}
             />
-            <div className="relative flex-1 flex flex-col max-w-xs w-full bg-slate-900">
+            <div className="relative flex-1 flex flex-col max-w-xs w-full bg-[#0B1F3A]">
               <div className="absolute top-0 right-0 -mr-12 pt-2">
                 <button
                   type="button"
@@ -45,60 +59,14 @@ export const DashboardLayout: React.FC = () => {
                   <X className="h-6 w-6" />
                 </button>
               </div>
-              <Sidebar />
+              <Sidebar isCollapsed={false} />
             </div>
           </div>
         )}
 
-        {/* Main Content Area */}
-        <main className="flex-1 flex flex-col min-w-0 overflow-y-auto">
-          {/* Top Bar with Mobile Toggle and Breadcrumbs */}
-          <div className="bg-white border-b border-slate-200 px-4 sm:px-6 py-2.5 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                className="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none"
-                onClick={() => setMobileSidebarOpen(true)}
-              >
-                <Menu className="h-5 w-5" />
-              </button>
-
-              {/* Breadcrumb Trail */}
-              <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
-                <Link to="/" className="hover:text-slate-800 flex items-center gap-1">
-                  <Home className="h-3.5 w-3.5 text-slate-400" />
-                  <span className="hidden sm:inline">Home</span>
-                </Link>
-                {pathParts.map((part, index) => {
-                  const to = `/${pathParts.slice(0, index + 1).join('/')}`;
-                  const isLast = index === pathParts.length - 1;
-                  const formatted = part.replace(/-/g, ' ').toUpperCase();
-
-                  return (
-                    <React.Fragment key={to}>
-                      <ChevronRight className="h-3 w-3 text-slate-400" />
-                      {isLast ? (
-                        <span className="font-semibold text-slate-800 truncate max-w-[150px]">{formatted}</span>
-                      ) : (
-                        <Link to={to} className="hover:text-slate-800 truncate max-w-[150px]">
-                          {formatted}
-                        </Link>
-                      )}
-                    </React.Fragment>
-                  );
-                })}
-              </nav>
-            </div>
-
-            {/* Top right statutory info */}
-            <div className="hidden sm:flex items-center gap-2 text-[11px] text-slate-400">
-              <span className="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
-              <span>Central FDR Registry Secure Node</span>
-            </div>
-          </div>
-
-          {/* Page Content Container */}
-          <div className="p-4 sm:p-6 lg:p-8 max-w-7xl w-full mx-auto">
+        {/* Main Content Area (Only the right-side page content scrolls smoothly) */}
+        <main className="flex-1 overflow-y-auto min-w-0">
+          <div className="p-4 sm:p-6 lg:p-8 max-w-7xl w-full mx-auto space-y-6">
             <Outlet />
           </div>
         </main>

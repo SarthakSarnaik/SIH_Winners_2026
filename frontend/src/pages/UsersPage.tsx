@@ -87,7 +87,7 @@ export const UsersPage: React.FC = () => {
       {/* Header */}
       <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <div className="flex items-center gap-2 text-xs font-semibold text-purple-700 uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-xs font-semibold text-[#092D62] uppercase tracking-wider mb-1">
             <Users className="h-4 w-4" />
             <span>Role-Based Identity & Access Control</span>
           </div>
@@ -99,9 +99,9 @@ export const UsersPage: React.FC = () => {
 
         <button
           onClick={() => setShowAddModal(true)}
-          className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-purple-900 hover:bg-purple-800 text-white text-xs font-semibold shadow-sm transition-all"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#092D62] hover:bg-[#072249] text-white text-xs font-bold shadow-sm transition-all"
         >
-          <UserPlus className="h-4 w-4" />
+          <UserPlus className="h-4 w-4 text-[#FFB800]" />
           <span>Add Authorized User</span>
         </button>
       </div>
@@ -264,7 +264,7 @@ export const UsersPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-4 py-2 bg-purple-900 text-white rounded-lg font-semibold hover:bg-purple-800 disabled:opacity-50"
+                  className="px-4 py-2 bg-[#092D62] text-white rounded-xl font-bold hover:bg-[#072249] transition-colors disabled:opacity-50"
                 >
                   {isSubmitting ? 'Creating...' : 'Create Account'}
                 </button>

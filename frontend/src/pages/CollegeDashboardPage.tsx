@@ -95,14 +95,14 @@ export const CollegeDashboardPage: React.FC = () => {
         <div className="flex items-center gap-2">
           <Link
             to="/fdrs/new"
-            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-aicte-navy-900 hover:bg-aicte-navy-800 text-white text-xs font-semibold shadow-sm transition-all"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#092D62] hover:bg-[#072249] text-white text-xs font-bold shadow-sm transition-all"
           >
-            <PlusCircle className="h-4 w-4" />
+            <PlusCircle className="h-4 w-4 text-[#FFB800]" />
             <span>Submit New FDR</span>
           </Link>
           <Link
             to="/releases"
-            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-all"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-all shadow-xs"
           >
             <ArrowUpRight className="h-4 w-4 text-slate-500" />
             <span>Release Requests</span>

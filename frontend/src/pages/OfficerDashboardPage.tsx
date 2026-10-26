@@ -93,14 +93,14 @@ export const OfficerDashboardPage: React.FC = () => {
         <div className="flex items-center gap-2">
           <Link
             to="/officer/queue"
-            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-blue-900 hover:bg-blue-800 text-white text-xs font-semibold shadow-sm transition-all"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#092D62] hover:bg-[#072249] text-white text-xs font-bold shadow-sm transition-all"
           >
-            <CheckSquare className="h-4 w-4" />
+            <CheckSquare className="h-4 w-4 text-[#FFB800]" />
             <span>Open Scrutiny Queue</span>
           </Link>
           <Link
             to="/reports"
-            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-all"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-all shadow-xs"
           >
             <span>Compliance Reports</span>
           </Link>

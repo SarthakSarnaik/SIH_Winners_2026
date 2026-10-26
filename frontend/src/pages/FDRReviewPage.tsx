@@ -385,9 +385,10 @@ export const FDRReviewPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white text-xs font-semibold rounded-lg shadow-sm transition-colors disabled:opacity-50"
+                className="px-5 py-2.5 bg-[#092D62] hover:bg-[#072249] text-white text-xs font-bold rounded-xl shadow-sm transition-colors disabled:opacity-50 flex items-center gap-2"
               >
-                {isSubmitting ? 'Recording Decision...' : 'Commit Scrutiny Decision'}
+                <CheckSquare className="h-4 w-4 text-[#FFB800]" />
+                <span>{isSubmitting ? 'Recording Decision...' : 'Commit Scrutiny Decision'}</span>
               </button>
             </div>
           </form>

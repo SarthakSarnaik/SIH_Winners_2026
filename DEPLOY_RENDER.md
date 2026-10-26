@@ -1,4 +1,4 @@
-# Deploying DepositLedger to Render & Vercel
+# Deploying VajraKosh to Render & Vercel
 
 > For the comprehensive, step-by-step deployment guide covering both **Render** (FastAPI backend + PostgreSQL) and **Vercel** (React Vite frontend), see **[`DEPLOYMENT_GUIDE.md`](./DEPLOYMENT_GUIDE.md)**.
 

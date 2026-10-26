@@ -1,4 +1,4 @@
-# DepositLedger: AICTE Security Deposit & FDR Management Portal
+# VajraKosh: AICTE Security Deposit & FDR Management Portal
 ### Problem Statement ID: 26265 — Streamline of Security Deposit / FDR Portal
 **Intended Organization:** All India Council for Technical Education (AICTE), Ministry of Education, Government of India.
 
@@ -12,7 +12,7 @@
 
 Technical institutions applying for AICTE approval or introducing new courses are statutorily required to establish Fixed Deposit Receipts (FDRs) or Security Deposits in joint lien with the Member Secretary, AICTE. Managing these instruments across thousands of institutions via fragmented spreadsheets and physical files introduces risks of missed maturities, lack of verification traceability, and delays in legitimate release/refund requests.
 
-**DepositLedger** provides a centralized, secure, transparent, and auditable digital solution for the complete lifecycle of institutional security deposits:
+**VajraKosh** provides a centralized, secure, transparent, and auditable digital solution for the complete lifecycle of institutional security deposits:
 1. **Digital Registration & Document Custody:** Institution users submit FDR instruments with branch seals, verified through server-side validation and anti-IDOR isolation.
 2. **AICTE Officer Scrutiny:** Structured verification workflow with discrepancy detection, documentary evidence tagging, and mandatory observation logs.
 3. **Automated Idempotent Maturity Monitoring:** Scheduled engine calculating advance notices (30, 15, 7, 0 days, and overdue) with zero duplicate notifications.
