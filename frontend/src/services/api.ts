@@ -11,7 +11,7 @@ const getApiBase = () => {
     typeof window !== 'undefined' && 
     (window.location.hostname.includes('.onrender.com') || window.location.hostname.includes('.vercel.app'))
   ) {
-    return 'https://aicte-fdr-backend.onrender.com/api/v1';
+    return 'https://sih-winners-2026.onrender.com/api/v1';
   }
   return '/api/v1';
 };
